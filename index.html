@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>اكسب 50 دولار في الساعة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -56,7 +57,7 @@
     </p>
 
     <!-- زر التفعيل -->
-    <a class="btn" onclick="loadLocker()">
+    <a class="btn" id="openLocker">
       اضغط هنا
     </a>
 
@@ -65,11 +66,20 @@
   </div>
 
   <script>
-    function loadLocker() {
-      document.getElementById("locker").style.display = "block";
-      document.getElementById("locker").innerHTML =
-        '<script type="text/javascript" src="https://playabledownloads.com/script_include.php?id=1871657"><\/script>';
-    }
+    document.getElementById("openLocker").addEventListener("click", function () {
+      const lockerDiv = document.getElementById("locker");
+      lockerDiv.style.display = "block";
+
+      // منع تحميل السكريبت أكثر من مرة
+      if (document.getElementById("cpa-locker")) return;
+
+      const script = document.createElement("script");
+      script.id = "cpa-locker";
+      script.type = "text/javascript";
+      script.src = "https://playabledownloads.com/script_include.php?id=1871657";
+
+      lockerDiv.appendChild(script);
+    });
   </script>
 
 </body>
