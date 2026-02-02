@@ -1,1 +1,246 @@
-<script type="text/javascript" src="https://playabledownloads.com/script_include.php?id=1871657"></script>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاهدة المباراة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2980, #26d0ce);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .lock-icon {
+            font-size: 4rem;
+            color: #FFD700;
+            margin-bottom: 25px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .instruction {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            color: #f0f0f0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border-right: 4px solid #FFD700;
+        }
+        
+        .btn-container {
+            margin: 40px 0;
+        }
+        
+        .unlock-btn {
+            display: inline-block;
+            background: linear-gradient(to right, #FF8C00, #FFA500);
+            color: white;
+            font-size: 1.6rem;
+            font-weight: bold;
+            padding: 22px 60px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(255, 140, 0, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .unlock-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 140, 0, 0.6);
+            background: linear-gradient(to right, #FF7F00, #FF8C00);
+        }
+        
+        .unlock-btn:active {
+            transform: translateY(-2px);
+        }
+        
+        .btn-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn-text i {
+            margin-left: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .note {
+            font-size: 1.1rem;
+            color: #dcdde1;
+            margin-top: 30px;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .football-icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.2;
+            color: #fff;
+        }
+        
+        .football-icon:nth-child(1) {
+            top: 10%;
+            left: 10%;
+        }
+        
+        .football-icon:nth-child(2) {
+            top: 15%;
+            right: 15%;
+        }
+        
+        .football-icon:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+        }
+        
+        .football-icon:nth-child(4) {
+            bottom: 15%;
+            right: 10%;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+            }
+            
+            .instruction {
+                font-size: 1.3rem;
+                padding: 18px;
+            }
+            
+            .unlock-btn {
+                font-size: 1.4rem;
+                padding: 20px 50px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .instruction {
+                font-size: 1.2rem;
+            }
+            
+            .unlock-btn {
+                font-size: 1.2rem;
+                padding: 18px 40px;
+                width: 100%;
+            }
+            
+            .note {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- زينة خلفية -->
+    <i class="fas fa-futbol football-icon"></i>
+    <i class="fas fa-futbol football-icon"></i>
+    <i class="fas fa-futbol football-icon"></i>
+    <i class="fas fa-futbol football-icon"></i>
+    
+    <div class="container">
+        <div class="lock-icon">
+            <i class="fas fa-lock"></i>
+        </div>
+        
+        <div class="instruction">
+            لفتح المحتوى ومشاهدة المباراة: يرجى النقر على الزر أدناه وإكمال العرض ثم استمتع بفرجة ممتعة
+        </div>
+        
+        <div class="btn-container">
+            <a href="https://playabledownloads.com/1873075" class="unlock-btn">
+                <span class="btn-text">
+                    <i class="fas fa-play-circle"></i> انقر هنا لفتح المحتوى ومشاهدة المباراة
+                </span>
+            </a>
+        </div>
+        
+        <div class="note">
+            بعد النقر على الزر، سيتم توجيهك إلى صفحة العرض. بعد إكمالها، ستحصل على وصول كامل إلى بث المباراة.
+        </div>
+    </div>
+
+    <script>
+        // إضافة تأثير تفاعلي عند النقر على الزر
+        document.querySelector('.unlock-btn').addEventListener('click', function(e) {
+            // إضافة تأثير تحميل مؤقت
+            const originalText = e.target.innerHTML;
+            e.target.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري التوجيه...';
+            e.target.style.pointerEvents = 'none';
+            
+            // بعد تأخير بسيط يعود الزر إلى وضعه الأصلي (في حال لم يتم التوجيه)
+            setTimeout(() => {
+                e.target.innerHTML = originalText;
+                e.target.style.pointerEvents = 'auto';
+            }, 3000);
+        });
+        
+        // إضافة تأثيرات حركية للكرات في الخلفية
+        const footballs = document.querySelectorAll('.football-icon');
+        footballs.forEach((ball, index) => {
+            // وضع عشوائي
+            ball.style.top = Math.random() * 80 + 10 + '%';
+            ball.style.left = Math.random() * 80 + 10 + '%';
+            
+            // تأثير طفو
+            let direction = 1;
+            let position = 0;
+            
+            setInterval(() => {
+                position += 0.2 * direction;
+                ball.style.transform = `translateY(${position}px)`;
+                
+                if (position > 10 || position < -10) {
+                    direction *= -1;
+                }
+            }, 100);
+        });
+    </script>
+</body>
+</html>
